@@ -1,0 +1,115 @@
+
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --title-length: 26;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+     background: var(--bg-color);
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.welcomeScreen {
+    min-height: 100vh;
+    max-width: 1100px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.otherContent {
+    min-height: 100vh;
+    background: black;
+}
+
+h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+    margin-bottom: 3rem;
+}
+
+svg {
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    fill: teal;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeUp 1.3s calc(4s + 0.5s) ease-in forwards,
+                bobUpDown 3s 5s linear infinite;
+}
+
+h1::before, h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+h1::before {
+    background: var(--bg-color);
+    animation: typewriter 4s steps(var(--title-length)) forwards;
+}
+
+h1::after {
+    background: teal;
+    width: 0.125em;
+    animation: typewriter 4s steps(var(--title-length)) forwards,
+    blink 750ms steps(var(--title-length)) infinite;
+}
+
+.subtitle {
+    font-size: clamp(0.5rem, 2vw + 0.5rem, 1.7rem);
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeUp 1s calc(4s + 0.5s) forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bobUpDown {
+    50% {
+        transform: translateY(0.3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

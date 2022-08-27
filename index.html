@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Jordan Rubenstein's Personal Website</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav collapsible">
+        <h1>Michael Jordan Rubenstein</h1>
+        <img class="nav__toggler" srcset="images/menu-svgrepo-com.svg" alt="" />
+        <ul class="list nav--list collapsible__content">
+          <li class="nav__item"><a href="#about">About Me</a></li>
+          <li class="nav__item"><a href="#">My Projects</a></li>
+          <li class="nav__item"><a href="#">My Resume</a></li>
+          <li class="nav__item"><a href="#">Contact Me</a></li>
+        </ul>
+      </nav>
+      <div class="welcomeScreen">
+        <h1 class="welcomeScreen__heading">Hello, I'm Michael&nbsp;</h1>
+        <!-- <p class="subtitle">Welcome!</p> -->
+        <svg
+          class="welcomeScreen__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <polygon
+              points="12 17.586 4.707 10.293 3.293 11.707 12 20.414 20.707 11.707 19.293 10.293 12 17.586"
+            />
+
+            <polygon
+              points="20.707 5.707 19.293 4.293 12 11.586 4.707 4.293 3.293 5.707 12 14.414 20.707 5.707"
+            />
+          </g>
+        </svg>
+      </div>
+    </header>
+
+    <section class="about container" id="about">
+      <div class="about__content" data-aos="fade-right">
+        <h2 class="about__title">About Me</h2>
+        <p>
+          A
+          <span class="highlighted">fullstack developer</span> with a focus in
+          <span class="highlighted">machine learning</span>. My passions are
+          coding, snowboarding, exploring and problem solving!
+        </p>
+        <p>
+          Third year at UofT, enrolled in the
+          <span class="highlighted"> Computer Science Specialist </span>
+          Program.
+        </p>
+      </div>
+      <img
+        class="about__pic"
+        src="images/michael-profile.JPG"
+        alt=""
+        data-aos="fade-in"
+      />
+    </section>
+
+    <section class="projects container">
+      <div class="project">
+        <h2 class="project__heading">UTinder</h2>
+        <p class="project__description">
+          Study Planner and Socialization App, Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit. Sapiente, nostrum at veniam nulla
+          aliquam quod suscipit minima excepturi dolor rerum!
+        </p>
+        <ul class="project__tools list list--inline">
+          <li class="list__item">a</li>
+          <li class="list__item">b</li>
+          <li class="list__item">c</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h2 class="project__heading">UTinder</h2>
+        <p class="project__description">
+          Study Planner and Socialization App, Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Aspernatur libero optio magnam, nihil
+          itaque animi magni iure cum praesentium doloribus.
+        </p>
+        <ul class="project__tools list list--inline">
+          <li class="list__item">a</li>
+          <li class="list__item">b</li>
+          <li class="list__item">c</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h2 class="project__heading">UTinder</h2>
+        <p class="project__description">
+          Study Planner and Socialization App, Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Aspernatur libero optio magnam, nihil
+          itaque animi magni iure cum praesentium doloribus.
+        </p>
+        <ul class="project__tools list list--inline">
+          <li class="list__item">a</li>
+          <li class="list__item">b</li>
+          <li class="list__item">c</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h2 class="project__heading">UTinder</h2>
+        <p class="project__description">
+          Study Planner and Socialization App, Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Aspernatur libero optio magnam, nihil
+          itaque animi magni iure cum praesentium doloribus.
+        </p>
+        <ul class="project__tools list list--inline">
+          <li class="list__item">a</li>
+          <li class="list__item">b</li>
+          <li class="list__item">c</li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

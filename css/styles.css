@@ -1,0 +1,482 @@
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #444;
+    --accent-color: rgba(50, 189, 189, 0.813);
+    --hover-background-color: #555;
+    --hover-font-color: #696969;
+    --title-length: 19;
+    --bg-color: white;
+}
+
+html {
+    font-size: 62.5%;
+    max-width: 100vw;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 100vw;
+    font-size: 2.4rem;
+}
+
+/* section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    scroll-snap-align: start;
+} */
+
+
+/* Scroll Snap */
+
+.wrapper {
+    width: 100vh;
+    height: 100vh;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+/* Container */
+
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Welcome Screen */
+
+.welcomeScreen {
+    min-height: 93vh;
+    max-width: 1100px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15rem
+}
+
+.welcomeScreen__heading {
+    font-size: 2.5rem;
+    position: relative;
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+    margin-bottom: 3rem;
+}
+
+.welcomeScreen__svg {
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(3rem, 3vw + 1rem, 7rem);
+    fill: teal;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeUp 1.3s calc(4s + 0.5s + 1s) ease-in forwards,
+                bobUpDown 3s 5s linear infinite;
+}
+
+.welcomeScreen__heading::before, .welcomeScreen__heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.welcomeScreen__heading::before {
+    background: var(--bg-color);
+    animation: typewriter 4s steps(var(--title-length)) forwards;
+}
+
+.welcomeScreen__heading::after {
+    background: teal;
+    width: 0.125em;
+    animation: typewriter 4s steps(var(--title-length)) forwards,
+    blink 750ms steps(var(--title-length)) infinite;
+}
+
+.subtitle {
+    font-size: clamp(0.5rem, 2vw + 0.5rem, 1.7rem);
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeUp 1s calc(4s + 0.5s) forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bobUpDown {
+    50% {
+        transform: translateY(0.3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 370px) {
+    .welcomeScreen__heading {
+        font-size: clamp(3rem, 3vw + 1rem, 7rem);
+    }
+}
+ 
+
+@media  screen and (min-width: 768px) {
+    .welcomeScreen {
+        margin-bottom: 0;
+    }
+}
+
+/* Buttons */
+
+.btn {
+    font-size: 2rem;
+    font-weight: 400;
+    background: none;
+    border: none;
+    border-radius: 50px;
+    padding: 1.7rem 3rem;
+}
+
+.btn--primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn--secondary {
+    color: var(--primary-color);
+    padding: calc(1.7rem - 2px) 3rem;
+    border: 2px solid var(--hover-background-color);
+}
+
+.btn:hover {
+    color: var(--hover-font-color);
+}
+
+.btn--secondary:hover {
+    border: 2px solid var(--hover-background-color);
+    color: var(--hover-color);
+}
+
+/* Special Words */
+
+.highlighted {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Badges */
+
+.badge {
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 2rem;
+}
+
+.badge--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Collapsibles */
+
+.collapsible__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__heading {
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.collapsible__chevron {
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.collapsible--expanded .collapsible__chevron {
+    transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+}
+
+/* Lists */
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list--inline .list__item{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list__item {
+
+}
+
+/* NavBar */
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    animation: fadeDown 1s calc(4s + 0.5s) ease-in forwards;
+}
+
+.nav > h1 {
+    padding-left: 1rem;
+    font-size: 2rem;
+}
+
+.nav--list {
+    width: 100%;
+    margin: 0;
+    padding-right: 1rem;
+}
+
+.nav__item {
+    padding: 1rem 1rem 0.5rem;
+    border-bottom: 1px solid var(--primary-color);
+    font-size: 2rem;
+}
+
+.nav__item > a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.nav__item > a:hover {
+    color: var(--hover-font-color);
+}
+
+.nav__toggler {
+    width: 2.5rem;
+    opacity: 0.8;
+    transition: box-shadow 0.15s;
+    cursor: pointer;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+    opacity: 1;
+    box-shadow: 0 0 0 3px #666;
+    border-radius: 5px;
+}
+
+
+@media screen and (min-width: 375px) {
+
+    .nav {
+        padding: 0.7rem 2rem;
+    }
+
+    .nav > h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav__toggler {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .nav {
+        padding: 1rem 3rem;
+    }
+
+    .nav__item {
+        font-size: 2.5rem;
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .nav > h1 {
+        font-size: 3rem;
+    }
+
+    .nav__toggler {
+        width: 3.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .nav__toggler {
+        display: none;
+    }
+
+    .nav--list {
+        width: auto;
+        display: flex;
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .nav__item {
+        border: 0;
+        font-size: 2.4rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav > h1 {
+        font-size: 3.5rem;
+    }
+
+}
+
+
+
+
+
+
+/* About Me */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    padding: 0 2.5rem;
+    /* border: 1px solid red; */
+}
+
+.about__title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px #ccc;
+}
+
+.about__content {
+    padding: 2rem;
+    font-size: 2rem;
+    word-spacing: 2px;
+    line-height: 3rem;
+}
+
+.about__content > p {
+    color: #696969;
+}
+
+.about__pic {
+    width: 230px;
+    border-radius: 50%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .about {
+        flex-direction: row;
+        padding: 0 3rem;
+    }
+
+    .about__title {
+        font-size: 4.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .about__content {
+        margin-right: 5rem;
+        font-size: 2.3rem;
+    }
+}
+
+
+/* Projects */
+
+.projects {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.project {
+    background: rgb(0, 0, 0, 0.6);
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    padding: 2rem;
+}
+
+.project__heading {
+    font-size: 3rem;
+}
+
+.project__description {
+    font-size: 1.8rem;
+}
