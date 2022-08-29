@@ -381,13 +381,12 @@
               </li>
             </ul>
           </div>
-          <form class="contact__form" action="">
-            <input
-              id="name"
-              type="text"
-              pattern="[A-Za-z0-9]+@[A-Za-z0-9]+/.[A-Za-z0-9]{2,}"
-              placeholder="name"
-            />
+          <form
+            class="contact__form"
+            action="https://formspree.io/f/xayknvbg"
+            method="POST"
+          >
+            <input id="name" type="text" placeholder="name" />
             <input id="email" type="email" placeholder="email" />
             <textarea
               name="message"
