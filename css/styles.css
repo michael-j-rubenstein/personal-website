@@ -532,6 +532,10 @@ body {
     transition: color 0.3s ease;
 } 
 
+.link--crossed {
+    text-decoration: line-through;
+}
+
 .project__link:hover {
     color: rgba(50, 189, 189, 1)
 }
