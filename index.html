@@ -10,121 +10,241 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav collapsible">
-        <h1>Michael Jordan Rubenstein</h1>
-        <img class="nav__toggler" srcset="images/menu-svgrepo-com.svg" alt="" />
-        <ul class="list nav--list collapsible__content">
-          <li class="nav__item"><a href="#about">About Me</a></li>
-          <li class="nav__item"><a href="#">My Projects</a></li>
-          <li class="nav__item"><a href="#">My Resume</a></li>
-          <li class="nav__item"><a href="#">Contact Me</a></li>
-        </ul>
-      </nav>
-      <div class="welcomeScreen">
-        <h1 class="welcomeScreen__heading">Hello, I'm Michael&nbsp;</h1>
-        <!-- <p class="subtitle">Welcome!</p> -->
-        <svg
-          class="welcomeScreen__svg"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <g>
-            <polygon
-              points="12 17.586 4.707 10.293 3.293 11.707 12 20.414 20.707 11.707 19.293 10.293 12 17.586"
-            />
+    <div class="project-container container">
+      <h2>My Projects</h2>
+      <section class="projects">
+        <div class="project" data-aos="fade-in">
+          <img class="project__image" src="images/utinder-pages.JPG" alt="" />
+          <div class="project__content">
+            <h3>UTinder Socialization Application</h3>
+            <p>
+              Technologies Used:
+              <span class="highlighted">Firebase</span>
+            </p>
+            <p>
+              Languages Used:
+              <span class="highlighted">Java</span>
+            </p>
+            <ul class="list project__list">
+              <li class="list__item project__item">
+                Study planner and socialization app for University of Toronto
+                students.
+              </li>
+              <li class="list__item project__item">
+                App consists of five sections: home, events calendar, community,
+                pomodoro, and my account.
+              </li>
+              <li class="list__item project__item">
+                App is fully connected to firebase, where users account
+                information, events, and posts all stored in firebase.
+              </li>
+              <li class="list__item project__item">
+                Students are able to connect via the community section through
+                posts and comments.
+              </li>
+              <li class="list__item project__item">
+                Students are also able to better organize their time through
+                using the home page, events calendar and pomodoro timer.
+              </li>
+            </ul>
+            <ul class="list list--inline project__links">
+              <li class="list__item">
+                <a class="project__link" href="#">Live</a>
+              </li>
+              <li class="list__item">
+                <a class="project__link" href="#">Repo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            <polygon
-              points="20.707 5.707 19.293 4.293 12 11.586 4.707 4.293 3.293 5.707 12 14.414 20.707 5.707"
-            />
-          </g>
-        </svg>
-      </div>
-    </header>
+        <div class="project" data-aos="fade-in">
+          <img class="project__image" src="images/moshify.png" alt="" />
+          <div class="project__content">
+            <h3>UTinder Socialization Application</h3>
+            <p>
+              Technologies Used:
+              <span class="highlighted">Firebase</span>
+            </p>
+            <p>
+              Languages Used:
+              <span class="highlighted">Java</span>
+            </p>
+            <ul class="list project__list">
+              <li class="list__item project__item">
+                Study planner and socialization app for University of Toronto
+                students.
+              </li>
+              <li class="list__item project__item">
+                App consists of five sections: home, events calendar, community,
+                pomodoro, and my account.
+              </li>
+              <li class="list__item project__item">
+                App is fully connected to firebase, where users account
+                information, events, and posts all stored in firebase.
+              </li>
+              <li class="list__item project__item">
+                Students are able to connect via the community section through
+                posts and comments.
+              </li>
+              <li class="list__item project__item">
+                Students are also able to better organize their time through
+                using the home page, events calendar and pomodoro timer.
+              </li>
+            </ul>
+            <ul class="list list--inline project__links">
+              <li class="list__item">
+                <a class="project__link" href="#">Live</a>
+              </li>
+              <li class="list__item">
+                <a class="project__link" href="#">Repo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-    <section class="about container" id="about">
-      <div class="about__content" data-aos="fade-right">
-        <h2 class="about__title">About Me</h2>
-        <p>
-          A
-          <span class="highlighted">fullstack developer</span> with a focus in
-          <span class="highlighted">machine learning</span>. My passions are
-          coding, snowboarding, exploring and problem solving!
-        </p>
-        <p>
-          Third year at UofT, enrolled in the
-          <span class="highlighted"> Computer Science Specialist </span>
-          Program.
-        </p>
-      </div>
-      <img
-        class="about__pic"
-        src="images/michael-profile.JPG"
-        alt=""
-        data-aos="fade-in"
+        <div class="project" data-aos="fade-in">
+          <img
+            class="project__image"
+            src="images/floodrisk-canada-project.png"
+            alt=""
+          />
+          <div class="project__content">
+            <!-- <h3>Flood Map of Canada (2000~2100)</h3> -->
+            <h3>
+              Predicting and Visualizing the Rise in Sea Levels around Canadian
+              Shores
+            </h3>
+            <p>
+              Technologies Used:
+              <span class="highlighted">Elevations API</span>,
+              <span class="highlighted">NetCDF4 Library</span>,
+              <span class="highlighted">Scikit-learn Library</span>,
+              <span class="highlighted">Plotly.express Library</span>,
+              <span class="highlighted">Pandas Library</span>
+            </p>
+            <p>
+              Languages Used:
+              <span class="highlighted">Python</span>
+            </p>
+            <ul class="list project__list">
+              <li class="list__item project__item">
+                Visualizing the flooded regions of Canada due to the rise in sea
+                levels for the decades between 2020 and 2100.
+              </li>
+              <li class="list__item project__item">
+                Found a correlation between temperature and sea level increase
+                to predict the sea levels of later years.
+              </li>
+              <li class="list__item project__item">
+                Bubble map representing flooded regions with a slidable bar for
+                better visualization of time passage.
+              </li>
+            </ul>
+            <ul class="list list--inline project__links">
+              <li class="list__item">
+                <a class="project__link" href="#">Live</a>
+              </li>
+              <li class="list__item">
+                <a class="project__link" href="#">Repo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project" data-aos="fade-in">
+          <video class="project__image" autoplay loop>
+            <source src="images/frogger.mp4" type="video/mp4" />
+          </video>
+          <div class="project__content">
+            <h3>Frogger Game</h3>
+            <p>
+              Technologies Used:
+              <span class="highlighted">MARS application</span>
+            </p>
+            <p>
+              Languages Used:
+              <span class="highlighted">Assembly</span>
+            </p>
+            <ul class="list project__list">
+              <li class="list__item project__item">
+                Completely built with assembly. Used MMIO Keyboard Simulator for
+                controls.
+              </li>
+              <li class="list__item project__item">
+                Game consists of: two levels, live counter, score counter, and
+                bonus items.
+              </li>
+              <li class="list__item project__item">
+                Goal of level 1: Get to the other side
+              </li>
+              <li class="list__item project__item">
+                Goal of level 2: Make it through the maze
+              </li>
+            </ul>
+            <ul class="list list--inline project__links">
+              <li class="list__item">
+                <a class="project__link" href="#">Live</a>
+              </li>
+              <li class="list__item">
+                <a class="project__link" href="#">Repo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project" data-aos="fade-in">
+          <img class="project__image" src="images/paris-project.PNG" alt="" />
+          <div class="project__content">
+            <h3>Paris Trip Itinerary Generator</h3>
+            <p>
+              Technologies Used:
+              <span class="highlighted">Google Places API</span>,
+              <span class="highlighted">PositionStack API</span>,
+              <span class="highlighted">Dijkstra's Shortest Path Algorithm</span
+              >, <span class="highlighted">Matplotlib Library</span>,
+              <span class="highlighted">Numpy Library</span>
+            </p>
+            <p>
+              Languages Used:
+              <span class="highlighted">Python</span>
+            </p>
+            <ul class="list project__list">
+              <li class="list__item project__item">
+                Create a day trip itinerary for a trip in Paris.
+              </li>
+              <li class="list__item project__item">
+                Trip Itinerary consists of: Hotel accomodation, travel,
+                attractions, and restaurants. The algorithm also calculates for
+                estimated duration and travel time.
+              </li>
+              <li class="list__item project__item">
+                Generator takes in hotel leave and return times, and returns two
+                pop ups: Possible Path (Graph) and Possible Schedule (Table).
+              </li>
+            </ul>
+            <ul class="list list--inline project__links">
+              <li class="list__item">
+                <a class="project__link" href="#">Live</a>
+              </li>
+              <li class="list__item">
+                <a class="project__link" href="#">Repo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- <form action="">
+      <input
+        type="text"
+        pattern="[A-Za-z0-9]+@[A-Za-z0-9]+/.[A-Za-z0-9]{2,}"
+        placeholder="name"
       />
-    </section>
-
-    <section class="projects container">
-      <div class="project">
-        <h2 class="project__heading">UTinder</h2>
-        <p class="project__description">
-          Study Planner and Socialization App, Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Sapiente, nostrum at veniam nulla
-          aliquam quod suscipit minima excepturi dolor rerum!
-        </p>
-        <ul class="project__tools list list--inline">
-          <li class="list__item">a</li>
-          <li class="list__item">b</li>
-          <li class="list__item">c</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h2 class="project__heading">UTinder</h2>
-        <p class="project__description">
-          Study Planner and Socialization App, Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Aspernatur libero optio magnam, nihil
-          itaque animi magni iure cum praesentium doloribus.
-        </p>
-        <ul class="project__tools list list--inline">
-          <li class="list__item">a</li>
-          <li class="list__item">b</li>
-          <li class="list__item">c</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h2 class="project__heading">UTinder</h2>
-        <p class="project__description">
-          Study Planner and Socialization App, Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Aspernatur libero optio magnam, nihil
-          itaque animi magni iure cum praesentium doloribus.
-        </p>
-        <ul class="project__tools list list--inline">
-          <li class="list__item">a</li>
-          <li class="list__item">b</li>
-          <li class="list__item">c</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h2 class="project__heading">UTinder</h2>
-        <p class="project__description">
-          Study Planner and Socialization App, Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Aspernatur libero optio magnam, nihil
-          itaque animi magni iure cum praesentium doloribus.
-        </p>
-        <ul class="project__tools list list--inline">
-          <li class="list__item">a</li>
-          <li class="list__item">b</li>
-          <li class="list__item">c</li>
-        </ul>
-      </div>
-    </section>
-
+      <input type="email" placeholder="email" />
+      <input type="text" placeholder="message" maxlength="300" />
+      <input type="submit" />
+    </form> -->
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
