@@ -405,8 +405,21 @@
             method="POST"
             data-aos="zoom-in-down"
           >
-            <input name="name" id="name" type="text" placeholder="name" />
-            <input name="email" id="email" type="email" placeholder="email" />
+            <input
+              name="name"
+              id="name"
+              type="text"
+              placeholder="name"
+              required
+            />
+            <input
+              name="email"
+              id="email"
+              type="email"
+              pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+              placeholder="email"
+              required
+            />
             <textarea
               name="message"
               id="message"
@@ -414,6 +427,7 @@
               rows="7"
               maxlength="300"
               placeholder="message"
+              required
             ></textarea>
             <button class="btn contact__btn" type="submit">Send Message</button>
           </form>
