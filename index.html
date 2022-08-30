@@ -29,7 +29,7 @@
               >My Resume</a
             >
           </li>
-          <li class="nav__item"><a href="#">Contact Me</a></li>
+          <li class="nav__item"><a href="#contact">Contact Me</a></li>
         </ul>
       </nav>
       <div class="welcomeScreen">
@@ -356,7 +356,7 @@
       </div>
     </section>
 
-    <section class="contact-wrapper">
+    <section id="contact" class="contact-wrapper">
       <div class="contact-container container">
         <h2 class="heading container">Contact Me</h2>
         <div class="contact">
@@ -368,16 +368,34 @@
             </p>
             <ul class="list list--inline contact__list">
               <li class="list__item">
-                <a class="fa-brands fa-linkedin-in fa-lg" href="#"></a>
+                <a
+                  class="fa-brands fa-linkedin-in fa-lg"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://www.linkedin.com/in/michael-j-rubenstein/"
+                ></a>
               </li>
               <li class="list__item">
-                <a class="fa-brands fa-instagram fa-lg" href="#"></a>
+                <a
+                  class="fa-brands fa-instagram fa-lg"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://www.instagram.com/michael_j_rubenstein/"
+                ></a>
               </li>
               <li class="list__item">
-                <a class="fa-brands fa-github fa-lg" href="#"></a>
+                <a
+                  class="fa-brands fa-github fa-lg"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="https://github.com/michael-j-rubenstein"
+                ></a>
               </li>
               <li class="list__item">
-                <a class="fa-solid fa-envelope fa-lg" href="#"></a>
+                <a
+                  class="fa-solid fa-envelope fa-lg"
+                  href="mailto:michael@iu21.com"
+                ></a>
               </li>
             </ul>
           </div>
@@ -386,8 +404,8 @@
             action="https://formspree.io/f/xayknvbg"
             method="POST"
           >
-            <input id="name" type="text" placeholder="name" />
-            <input id="email" type="email" placeholder="email" />
+            <input name="name" id="name" type="text" placeholder="name" />
+            <input name="email" id="email" type="email" placeholder="email" />
             <textarea
               name="message"
               id="message"
@@ -401,6 +419,15 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Designed and Implemented by
+          <span class="highlighted">Michael J Rubenstein</span>
+        </p>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
