@@ -50,7 +50,7 @@ body {
 /* Welcome Screen */
 
 .welcomeScreen {
-    min-height: 93vh;
+    min-height: 85vh;
     max-width: 1100px;
     display: grid;
     place-content: center;
@@ -297,7 +297,7 @@ body {
     align-items: center;
     padding: 0 1rem;
     opacity: 0;
-    animation: fadeDown 1s calc(4s + 0.5s) ease-in forwards;
+    animation: fadeDown 1s calc(4.5s) ease-in forwards;
 }
 
 .nav > h1 {
@@ -390,16 +390,29 @@ body {
 
     .nav__item {
         border: 0;
-        font-size: 2.4rem;
+        font-size: 2rem;
         padding: 1rem 1.5rem;
+    }
+
+    .nav > h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+
+@media screen and (min-width: 1380px) {
+
+    .nav__item {
+        border: 0;
+        font-size: 2.4rem;
+        padding: 1rem 2rem;
     }
 
     .nav > h1 {
         font-size: 3.5rem;
     }
-
 }
-
 
 
 /* About Me */
