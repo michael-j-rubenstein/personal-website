@@ -583,6 +583,11 @@ body {
 }
 
 @media screen and (min-width: 1400px) {
+
+    .project-container > h2 {
+        margin: 3rem 0;
+    }
+
     .projects {
         margin: 1rem auto;
     }
