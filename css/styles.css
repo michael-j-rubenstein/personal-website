@@ -626,6 +626,7 @@ body {
 
 .contact__content > p {
     margin-bottom: 4rem;
+    font-size: 2rem;
 }
 
 .contact__list {
