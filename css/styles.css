@@ -691,6 +691,7 @@ body {
 .contact__btn:hover {
     color: white;
     background: var(--accent-full-color);
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
