@@ -1,16 +1,24 @@
 export const PROJECTS = [
   {
-    title: "Laureate Club",
+    title: "FOMO",
     description:
-      "Failed Startup brining discounted luxury travel to young adults",
+      "Startup leveraging the FOMO effect to keep eachother productive",
+    imageSrc: "/images/project/fomo.png",
+    categories: new Set(["Startup", "Web", "Mobile"]),
+    blogSlug: "",
+    deployedUrl: "https://fomoapp.ca/",
+  },
+  {
+    title: "Laureate Club",
+    description: "Startup brining discounted luxury travel to young adults",
     imageSrc: "/images/project/lc-logo.png",
-    categories: new Set(["Startup"]),
+    categories: new Set(["Startup", "Web", "Mobile"]),
     blogSlug: "",
     deployedUrl: "",
   },
   {
     title: "Profile Picture Diffusion Model",
-    description: "DQN Agent that demolishes Pacman using Pygame and Pytorch",
+    description: "Built and trained UNet diffusion model on CryptoPunks NFTs",
     imageSrc: "/images/project/diffusion-model.png",
     categories: new Set(["AI"]),
     blogSlug: "",
@@ -53,7 +61,7 @@ export const PROJECTS = [
   {
     title: "Meals2U Food App",
     description:
-      "Homepage for a nonexistent cloud hositing company: Moshify (course project)",
+      "Homepage for a nonexistent food ordering application (project)",
     imageSrc: "/images/project/meals2u.png",
     categories: new Set(["Web"]),
     blogSlug: "project-3",
@@ -62,7 +70,7 @@ export const PROJECTS = [
   {
     title: "Rise in Sea Levels in Canada",
     description:
-      "Homepage for a nonexistent cloud hositing company: Moshify (course project)",
+      "Predicting the rise in sea levels in Canada using a Linear Regression Model",
     imageSrc: "/images/project/flooding.gif",
     categories: new Set(["AI"]),
     blogSlug: "project-3",
@@ -89,7 +97,7 @@ export const PROJECTS = [
     title: "Paris Trip Itinerary Generator",
     description:
       "Homepage for a nonexistent cloud hositing company: Moshify (course project)",
-    imageSrc: "/images/project/paris-project.png",
+    imageSrc: "/images/project/paris-project.jpg",
     categories: new Set(["Mobile"]),
     blogSlug: "project-3",
     deployedUrl: "",

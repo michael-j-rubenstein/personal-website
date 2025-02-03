@@ -53,6 +53,8 @@ const ProjectCard = ({
                   !deployedUrl && styles.linkDisabled
                 }`}
                 href={deployedUrl || "#"}
+                noreferrer="noopener"
+                target="_blank"
               >
                 Live
               </a>
