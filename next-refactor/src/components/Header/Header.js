@@ -4,6 +4,17 @@ import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
 
+const HEADER_LINKS = [
+  { href: "#about", text: "About", newTab: false },
+  { href: "#projects", text: "Projects", newTab: false },
+  {
+    href: "https://github.com/michael-j-rubenstein",
+    text: "Repository",
+    newTab: true,
+  },
+  { href: "#contact", text: "Contact", newTab: false },
+];
+
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
@@ -16,7 +27,11 @@ const Header = () => {
   }, []);
   return (
     <header>
-      <nav className={`${styles.nav} ${styles.collapsible}`}>
+      <nav
+        className={`${styles.nav} ${styles.collapsible} ${
+          isNavOpen && styles.collapsibleExpanded
+        }`}
+      >
         <h1>Michael Jordan Rubenstein</h1>
         <Image
           className={styles.navToggler}
@@ -26,48 +41,23 @@ const Header = () => {
           alt=""
           onClick={() => setIsNavOpen((val) => !val)}
         />
-        {(isNavOpen || screenWidth >= 1100) && (
-          <ul
-            className={`${styles.list} ${styles.navList} ${styles.collapsibleContent}`}
-          >
-            <li className={styles.navItem}>
-              <a href="#about">About Me</a>
-            </li>
-            <li className={styles.navItem}>
-              <a href="#projects">My Projects</a>
-            </li>
-            <li className={styles.navItem}>
+
+        <ul
+          className={`${styles.list} ${styles.navList} ${styles.collapsibleContent}`}
+        >
+          {HEADER_LINKS.map(({ href, text, newTab }, index) => (
+            <li key={text} className={`${styles.navItem} }`}>
               <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://github.com/michael-j-rubenstein"
+                href={href}
+                target={newTab ? "_blank" : "_self"}
+                rel={newTab ? "noreferrer noopener" : ""}
               >
-                My Repository
+                {text}
               </a>
             </li>
-            <li className={styles.navItem}>
-              <a href="#contact">Contact Me</a>
-            </li>
-          </ul>
-        )}
+          ))}
+        </ul>
       </nav>
-      {/* <div className={styles.welcomeScreen}>
-        <h1 className={styles.welcomeScreenHeading}>
-          Hello, I'm Michael&nbsp;
-        </h1>
-        <svg
-          className={styles.welcomeScreenSvg}
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <g>
-            <polygon points="12 17.586 4.707 10.293 3.293 11.707 12 20.414 20.707 11.707 19.293 10.293 12 17.586" />
-            <polygon points="20.707 5.707 19.293 4.293 12 11.586 4.707 4.293 3.293 5.707 12 14.414 20.707 5.707" />
-          </g>
-        </svg>
-      </div> */}
     </header>
   );
 };

@@ -1,0 +1,73 @@
+.welcomeScreen {
+  min-height: 85vh;
+  max-width: 1100px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15rem;
+}
+
+.welcomeScreenHeading {
+  font-size: 2.5rem;
+  position: relative;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  margin-bottom: 3rem;
+}
+
+.welcomeScreenSvg {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(3rem, 3vw + 1rem, 7rem);
+  fill: teal;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeUp 1.3s calc(4s + 0.5s + 1s) ease-in forwards,
+    bobUpDown 3s 5s linear infinite;
+}
+
+.welcomeScreenHeading::before,
+.welcomeScreenHeading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.welcomeScreenHeading::before {
+  background: var(--bg-color);
+  animation: typewriter 4s steps(var(--title-length)) forwards;
+}
+
+.welcomeScreenHeading::after {
+  background: teal;
+  width: 0.125em;
+  animation: typewriter 4s steps(var(--title-length)) forwards,
+    blink 750ms steps(var(--title-length)) infinite;
+}
+
+.subtitle {
+  font-size: clamp(0.5rem, 2vw + 0.5rem, 1.7rem);
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeUp 1s calc(4s + 0.5s) forwards;
+}
+
+@media screen and (min-width: 370px) {
+  .welcomeScreenHeading {
+    font-size: clamp(3rem, 3vw + 1rem, 7rem);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .welcomeScreen {
+    margin-bottom: 0;
+  }
+}
