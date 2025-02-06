@@ -9,7 +9,8 @@ const ProjectCard = ({
   description,
   imageSrc,
   categories,
-  blogSlug,
+  blogSlug = undefined,
+  repoUrl = undefined,
   deployedUrl = undefined,
   style,
 }) => {
@@ -46,8 +47,22 @@ const ProjectCard = ({
           <div className={styles.overlay}>
             <p className={styles.description}>{description}</p>
             <div className={styles.overlayLinks}>
-              <a className={styles.link}>More Info</a>
-              <a className={styles.link}>Repo</a>
+              <a
+                className={`${styles.link} ${!blogSlug && styles.linkDisabled}`}
+                href={`blog/${blogSlug}` || "#"}
+                noreferrer="noopener"
+                target="_blank"
+              >
+                More Info
+              </a>
+              <a
+                className={`${styles.link} ${!repoUrl && styles.linkDisabled}`}
+                href={repoUrl || "#"}
+                noreferrer="noopener"
+                target="_blank"
+              >
+                Repo
+              </a>
               <a
                 className={`${styles.link} ${
                   !deployedUrl && styles.linkDisabled

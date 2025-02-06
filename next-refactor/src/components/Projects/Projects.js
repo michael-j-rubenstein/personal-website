@@ -62,6 +62,7 @@ const Projects = () => {
             imageSrc,
             categories,
             blogSlug,
+            repoUrl,
             deployedUrl,
           }) => (
             <ProjectCard
@@ -71,6 +72,7 @@ const Projects = () => {
               imageSrc={imageSrc}
               categories={categories}
               blogSlug={blogSlug}
+              repoUrl={repoUrl}
               deployedUrl={deployedUrl}
             />
           )

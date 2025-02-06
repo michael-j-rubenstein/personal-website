@@ -24,6 +24,7 @@
   margin-right: auto;
   font-size: clamp(3rem, 3vw + 1rem, 7rem);
   fill: teal;
+  fill: var(--accent-color);
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeUp 1.3s calc(4s + 0.5s + 1s) ease-in forwards,
@@ -47,6 +48,7 @@
 
 .welcomeScreenHeading::after {
   background: teal;
+  background: var(--accent-color);
   width: 0.125em;
   animation: typewriter 4s steps(var(--title-length)) forwards,
     blink 750ms steps(var(--title-length)) infinite;

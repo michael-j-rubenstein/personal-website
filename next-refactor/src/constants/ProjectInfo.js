@@ -5,7 +5,7 @@ export const PROJECTS = [
       "Startup leveraging the FOMO effect to keep eachother productive",
     imageSrc: "/images/project/fomo.png",
     categories: new Set(["Startup", "Web", "Mobile"]),
-    blogSlug: "",
+    blogSlug: "fomo",
     deployedUrl: "https://fomoapp.ca/",
   },
   {
@@ -16,6 +16,14 @@ export const PROJECTS = [
     blogSlug: "",
     deployedUrl: "",
   },
+  //   {
+  //     title: "Wound³",
+  //     description: "Startup providing AI tools to track wound healing",
+  //     imageSrc: "/images/project/wound3.png",
+  //     categories: new Set(["Startup", "AI"]),
+  //     blogSlug: "",
+  //     deployedUrl: "",
+  //   },
   {
     title: "Profile Picture Diffusion Model",
     description: "Built and trained UNet diffusion model on CryptoPunks NFTs",
@@ -38,6 +46,34 @@ export const PROJECTS = [
     imageSrc: "/images/project/pacman-ai-win-faster.gif",
     categories: new Set(["AI"]),
     blogSlug: "",
+    deployedUrl: "",
+  },
+  {
+    title: "French to English Translation Model",
+    description:
+      "Created Transformer model to translate French to English following the Attention is All You Need paper (project)",
+    imageSrc: "/images/project/transformer-translation.png",
+    categories: new Set(["AI"]),
+    blogSlug: "",
+    repoUrl: "",
+    deployedUrl: "",
+  },
+  {
+    title: "TheWildestWest",
+    description: "",
+    imageSrc: "/images/project/the-wildest-west.gif",
+    categories: new Set(["Other"]),
+    blogSlug: "",
+    repoUrl: "https://github.com/StewartChandler/TheWildestWest/tree/main",
+    deployedUrl: "https://myxoma.itch.io/the-wildest-west",
+  },
+  {
+    title: "ThriveApp",
+    description: "",
+    imageSrc: "/images/project/lc-logo.png",
+    categories: new Set(["Mobile"]),
+    blogSlug: "",
+    repoUrl: "",
     deployedUrl: "",
   },
   {
