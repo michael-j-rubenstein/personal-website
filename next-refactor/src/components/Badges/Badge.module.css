@@ -16,3 +16,16 @@
   font-weight: 600;
   margin: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .badgeContainer {
+    gap: calc(1rem * var(--ipad-scale));
+    border: calc(1px * var(--ipad-scale)) solid var(--accent-color);
+    padding: calc(0.25rem * var(--ipad-scale)) calc(0.75rem * var(--ipad-scale));
+    border-radius: calc(0.5rem * var(--ipad-scale));
+  }
+
+  .badgeText {
+    font-size: calc(1.25rem * var(--ipad-scale));
+  }
+}

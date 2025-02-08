@@ -1,9 +1,29 @@
+:root {
+  --ipad-scale: 1.2;
+  --laptop-scale: 1.4;
+}
+
+.container {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.h1Container {
+  width: calc(100% - 1rem);
+  padding: 8rem 2rem 2.5rem;
+  margin-left: -1.5rem;
+  background-color: var(--accent-color);
+  margin-bottom: 3rem;
+}
+
 .h1 {
   font-weight: 300;
-  font-size: calc(1.5rem + 0.25 * (100vw - 20rem) / 22);
+  padding-left: 1rem;
+  font-size: 2.5rem;
   line-height: 1.25;
-  margin-top: 5rem;
   text-transform: uppercase;
+  color: white;
 }
 
 .h2 {
@@ -11,23 +31,29 @@
   font-weight: 700;
   margin: 7rem 0 1.5rem;
   padding-bottom: 0.25rem;
-  border-bottom: 1px solid #e0e0e0;
+  /* border-bottom: 1px solid #e0e0e0; */
   text-transform: capitalize;
 }
 
 .h3 {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 400;
   margin: 2.5rem 0 1.5rem;
   padding-bottom: 0.25rem;
   border-bottom: 1px solid #e0e0e0;
 }
 
 .p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0;
+}
+
+.a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .ul {
@@ -71,4 +97,44 @@
 
 .strong {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .h1Container {
+    width: calc(100% - 1rem * var(--ipad-scale));
+    padding: calc(8rem * var(--ipad-scale)) calc(2rem * var(--ipad-scale))
+      calc(2.5rem * var(--ipad-scale));
+    margin-left: calc(-1.5rem * var(--ipad-scale));
+    margin-bottom: calc(3rem * var(--ipad-scale));
+  }
+
+  .h1 {
+    font-size: calc(2.5rem * var(--ipad-scale));
+    padding-left: calc(1rem * var(--ipad-scale));
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .h2 {
+    font-size: calc(2rem * var(--ipad-scale));
+    margin: calc(7rem * var(--ipad-scale)) 0 calc(1.5rem * var(--ipad-scale));
+    padding-bottom: calc(0.25rem * var(--ipad-scale));
+  }
+
+  .h3 {
+    font-size: calc(1.75rem * var(--ipad-scale));
+    margin: calc(2.5rem * var(--ipad-scale)) 0 calc(1.5rem * var(--ipad-scale));
+    padding-bottom: calc(0.25rem * var(--ipad-scale));
+  }
+
+  .p {
+    font-size: calc(1.5rem * var(--ipad-scale));
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .h1Container {
+    padding: calc(8rem * var(--laptop-scale)) calc(2rem * var(--laptop-scale))
+      calc(2.5rem * var(--laptop-scale));
+  }
 }

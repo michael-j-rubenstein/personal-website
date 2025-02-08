@@ -1,0 +1,29 @@
+.container {
+  padding: 0 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  color: var(--hover-font-color);
+}
+
+.innerContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: calc(1.25rem * var(--ipad-scale));
+    margin: calc(2rem * var(--ipad-scale)) 0 calc(1rem * var(--ipad-scale));
+  }
+
+  .innerContainer {
+    gap: calc(0.5rem * var(--ipad-scale));
+  }
+}

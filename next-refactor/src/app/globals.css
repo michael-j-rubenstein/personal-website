@@ -10,6 +10,8 @@
   --title-length: 19;
   --bg-color: white;
   --shadow-color: rgba(101, 96, 96, 0.095);
+
+  --ipad-scale: 1.2;
 }
 
 html {
