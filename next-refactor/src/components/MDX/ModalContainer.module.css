@@ -1,0 +1,67 @@
+.container {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 6rem;
+  width: calc(100% - 4rem);
+}
+
+.container .container {
+  position: relative;
+  background-color: white;
+  display: block;
+  padding: 0;
+}
+
+.container .container .modalBtn,
+.container .container .modalBackBtn {
+  display: none;
+}
+
+.containerOpen {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: none;
+  width: 100%;
+}
+
+.containerOpen .content {
+  display: block;
+}
+
+.content .content {
+  display: block;
+}
+
+.btnContainer {
+  position: absolute;
+  width: calc(100% - 4rem);
+  padding-top: 2rem;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalBtn {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.modalBackBtn {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
