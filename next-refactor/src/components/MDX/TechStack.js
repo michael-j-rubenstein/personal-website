@@ -8,7 +8,7 @@ const TechStack = ({ technologies = [] }) => {
       <p className={styles.text}>Technologies Used:</p>
       <div className={styles.innerContainer}>
         {technologies.map((name) => (
-          <Badge>{name}</Badge>
+          <Badge key={name}>{name}</Badge>
         ))}
       </div>
     </div>

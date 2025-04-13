@@ -1,0 +1,137 @@
+.contactWrapper {
+  background: rgba(50, 189, 189, 0.3);
+  background: #84c395;
+}
+
+.contactContainer {
+  margin-top: 20rem;
+  padding: 3rem 2rem 5rem;
+}
+
+.contactContainer .heading {
+  margin: 3rem 0 5rem;
+}
+
+.contact {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactContent {
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.contactContent > h3 {
+  margin: 0 0 3rem;
+}
+
+.contactContent > p {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+}
+
+.contactList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contactList a {
+  color: var(--accent-color);
+  text-decoration: none;
+  max-height: 36px;
+}
+
+.contactIcon {
+  width: 36px;
+  height: 36px;
+  fill: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.contactIcon:hover {
+  fill: var(--accent-full-color);
+}
+
+.contactList a:hover {
+  color: var(--accent-full-color);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm > input[type="text"],
+.contactForm > input[type="email"],
+.contactForm > .message {
+  margin-bottom: 3rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  width: 95%;
+  min-width: 250px;
+}
+
+.contactForm > input[type="text"]:focus,
+.contactForm > input[type="email"]:focus,
+.contactForm > .message:focus {
+  border-color: var(--accent-full-color);
+  outline: 0;
+  box-shadow: 0 0 0 4px var(--accent-full-color);
+}
+
+.message {
+  resize: none;
+}
+
+.contactBtn {
+  color: white;
+  width: fit-content;
+  border: 3px solid var(--accent-full-color);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  background: var(--accent-color);
+}
+
+.contactBtn:hover {
+  color: white;
+  background: var(--accent-full-color);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+  }
+
+  .contactContent {
+    max-width: 550px;
+    flex-grow: 1;
+    margin-right: 4rem;
+  }
+
+  .contactForm {
+    flex-grow: 2;
+  }
+
+  .contactForm > input[type="text"],
+  .contactForm > input[type="email"],
+  .contactForm > .message {
+    min-width: 350px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contactContainer {
+    padding: 3rem 5rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .contactContainer {
+    padding: 5rem 0 10rem;
+  }
+}

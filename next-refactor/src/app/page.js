@@ -4,6 +4,8 @@ import Header from "@/components/Header/Header";
 import WelcomeBanner from "@/components/WelcomeBanner/WelcomeBanner";
 import AboutMe from "@/components/AboutMe/AboutMe";
 import Projects from "@/components/Projects/Projects";
+import ContactMe from "@/components/ContactMe/ContactMe";
+import CopyrightDisclaimer from "@/components/CopyrightDisclaimer/CopyrightDisclaimer";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <WelcomeBanner />
       <AboutMe />
       <Projects />
+      <ContactMe />
+      <CopyrightDisclaimer />
     </div>
   );
 }

@@ -66,16 +66,81 @@ combination with **AsyncStorage** to ensure smooth data handling and persistence
 Currently, the app is undergoing Beta testing on iOS. To sign up for testing, please visit
 the [FOMO website](https://fomoapp.ca/).
 
-### Backend
+### Backend (Initial Release)
 
-For fast development, the backend is currently deployed on **Firebase**, utilizing **Firestore** for NoSQL database management
-and **Firebase Cloud Functions** for serverless computing. The authentication system is powered by
-**Firebase Auth**, ensuring secure user management and data protection. **Firebase Cloud Storage** is
-used for image storage, allowing seamless integration with the frontend. Additionally, the **Expo
-Push Notifications API** is employed to deliver real-time notifications.
+For fast development, the backend is currently deployed on **Firebase**, utilizing **Firestore**
+for NoSQL database management and **Firebase Cloud Functions** for serverless computing. The
+authentication system is powered by **Firebase Auth**, ensuring secure user management and data
+protection. **Firebase Cloud Storage** is used for image storage, allowing seamless integration
+with the frontend. Additionally, the **Expo Push Notifications API** is employed to deliver
+real-time notifications.
+
+### Backend (Future Plans)
+
+Firebase is a great platform for initial development, but as the user base grows, it may become
+necessary to migrate to a more scalable solution. In the future, the backend will be
+transitioned **TBD**.
 
 ## Application Preview
 
+The application was designed to follow a minimalistic and intuitive user interface, focusing
+on ease of use and functionality. Below are some screenshots of the app in action.
+
+### Login Flow
+
+The **Login Flow** is designed to be **simple** and **straightforward**, allowing users to
+quickly access the app and start setting goals.
+
+<MainImage src="/images/blog/fomo/Login Demo.png" alt="Login Flow" />
+
 ### Tasks Page
 
-hello
+This screen is kept **private** to the user, where they can view their tasks for **Today** and
+**Tomorrow**.
+
+The design focuses on providing a **fast** and **intuitive** experience, allowing users to
+quickly add tasks without being overwhelmed. If they wish to make changes or set recurrences,
+they can easily do so by clicking on the task itself.
+
+There are two main types of tasks: **Daily Tasks** and **Recurrent Tasks**.
+
+**Daily Tasks** must be completed within the same day they are assigned. On the other hand,
+**Recurrent Tasks** are tasks that need to be completed a certain number of times each week.
+These tasks reset at the start of a new week, giving you a fresh opportunity to tackle them.
+
+<MainImage src="/images/blog/fomo/Tasks Demo.png" alt="Login Flow" />
+
+### Chat Page
+
+Welcome to the **social** side of the app, where the **FOMO** happens! On this page, users can
+see the tasks their friends have completed and the images they've shared. However, access
+to this content is unlocked only once they've completed a certain number of their own tasks.
+
+Users are notified whenever a friend completes a task, triggering a sense of **FOMO** that
+motivates them to catch up and view their friends' accomplishments.
+
+<MainImage src="/images/blog/fomo/Chat Demo.png" alt="Login Flow" />
+
+Interactive features on this page include **Sending Emojis** and **Commenting**. Users can
+quickly send an emoji by either double-tapping the post or by clicking the Emoji Icon in the
+bottom right corner, which opens an **Emoji Panel**. This feature allows users to easily
+express support or encouragement while adding to the **FOMO** by seeing posts with lots of emoji
+reactions from friends. For more options, users can customize their emojis by clicking the plus
+icon on the **Emoji Panel.**
+
+The chats are designed to be for you and your close friends, therefore they are currently limited
+to have only **6 members**. Users can join a chat via the chat **secret code**, which is a unique
+5 digit code that is generated when a user creates a chat.
+
+<MainImage src="/images/blog/fomo/Miscellaneous Demo.png" alt="Login Flow" />
+
+## Next Steps
+
+The application is curerntly under **Beta Testing** on iOS, and there are many new features that
+are planned to be released in the future. Some of the key features that are in the pipeline include:
+**_AI Powered Task Suggestions_**, **_Leaderboards_**, **_Customizable Themes_**, **_Task Streaks_**,
+**_Calendar View_**, and **_Profile Picture Generation_**, and more!
+
+Stay tuned for more updates!
+
+If you want to be a part of the Beta Testing, please visit the [FOMO website](https://fomoapp.ca/).

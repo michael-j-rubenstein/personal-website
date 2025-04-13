@@ -37,7 +37,7 @@ const Projects = () => {
 
   const filteredProjects = PROJECTS.filter(filterProjects);
   return (
-    <section className={`${styles.projectContainer} container`}>
+    <section className={`${styles.projectContainer} container`} id="projects">
       <div className={styles.projectHeadingContainer}>
         <h2 className="heading">My Projects</h2>
         <div className={styles.projectSections}>

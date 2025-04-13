@@ -6,6 +6,7 @@
   --accent-color: #638c6d;
   /* --accent-full-color: rgba(50, 189, 189); */
   --accent-full-color: rgb(0, 170, 170);
+  --accent-full-color: #638c6dca;
   --hover-background-color: #555;
   --hover-font-color: #696969;
   --title-length: 19;
@@ -49,6 +50,18 @@ body {
   font-size: 4.5rem;
   margin-bottom: 3rem;
   text-shadow: 1px 1px #ccc;
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.listInline .listItem {
+  display: inline-block;
+  margin-right: 2rem;
 }
 
 /* Key Frames */
