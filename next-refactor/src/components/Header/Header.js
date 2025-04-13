@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const HEADER_LINKS = [
   { href: "#about", text: "About", newTab: false },
+  { href: "#career", text: "Career", newTab: false },
   { href: "#projects", text: "Projects", newTab: false },
   {
     href: "https://github.com/michael-j-rubenstein",

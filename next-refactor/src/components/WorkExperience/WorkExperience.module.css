@@ -1,0 +1,79 @@
+.careerContainer {
+  padding: 0 2rem;
+  margin-top: 15rem;
+}
+
+.careerContainer > h2 {
+  padding-bottom: 2rem;
+}
+
+.experienceContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-right: 0.75rem;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.circleFilled {
+  background-color: var(--accent-color);
+}
+
+.line {
+  width: 3px;
+  height: calc(100% - 3rem - 3px);
+  background-color: var(--accent-color);
+}
+
+.experienceHeaderContainer {
+  display: flex;
+  padding: 0.35rem 0 0.25rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.experienceHeaderContainer > h3 {
+  font-size: 2.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.experienceHeaderContainer > p {
+  color: #696969;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0;
+  font-style: italic;
+  min-width: 100px;
+  text-align: right;
+}
+
+.experienceDetails {
+  width: 100%;
+}
+
+.experienceDetails > p {
+  color: #696969;
+  font-size: 1.75rem;
+  margin: 0.5rem 0 1.25rem;
+}
+
+.experienceDetails > p:last-child {
+  margin-bottom: 3rem;
+}
+
+.experienceContainer:last-of-type p:last-child {
+  margin-bottom: 1rem;
+}

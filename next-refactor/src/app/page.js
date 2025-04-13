@@ -6,6 +6,7 @@ import AboutMe from "@/components/AboutMe/AboutMe";
 import Projects from "@/components/Projects/Projects";
 import ContactMe from "@/components/ContactMe/ContactMe";
 import CopyrightDisclaimer from "@/components/CopyrightDisclaimer/CopyrightDisclaimer";
+import Career from "@/components/WorkExperience/WorkExperience";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <WelcomeBanner />
       <AboutMe />
+      <Career />
       <Projects />
       <ContactMe />
       <CopyrightDisclaimer />
