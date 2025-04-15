@@ -11,7 +11,7 @@ import {
 const ContactMe = () => {
   return (
     <section className={styles.contactWrapper} id="contact">
-      <div className="container">
+      <div className={`container ${styles.contactInnerWrapper}`}>
         <div className={`${styles.contactContainer} ${styles.container}`}>
           <h2 className={`${styles.heading} ${styles.container}`}>
             Contact Me

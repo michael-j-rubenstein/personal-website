@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.footer > div {
+  margin: 0;
+  padding: 0;
+}
+
 .footer p {
   margin: 0;
   padding: 1rem 2rem;

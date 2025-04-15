@@ -3,7 +3,7 @@ import styles from "./WorkExperience.module.css";
 
 const EXPERIENCE = [
   {
-    title: "Demo Engineer / Learning Content Developer",
+    title: "Demo Engineer / Sales Enablement",
     company: "IBM",
     date: "2024 - Present",
     jobDescription:
@@ -12,7 +12,7 @@ const EXPERIENCE = [
   },
   {
     title: "Machine Learning Engineer",
-    company: "Fabri Sciences",
+    company: "Fabri Sciences Inc.",
     date: "2023 - 2024",
     jobDescription:
       "Contracted to develop, fine-tune and validate the performance of neural networks to ensure effective integration into a 3D medical imaging application.",
@@ -50,7 +50,11 @@ const Career = () => {
       <h2 className="heading">My Career</h2>
       {EXPERIENCE.map(({ title, company, date, jobDescription, isCurrent }) => (
         <div key={title} className={styles.experienceContainer}>
-          <div></div>
+          <div className={styles.desktopExperienceDetails}>
+            <p>{date}</p>
+            <h3>{company}</h3>
+            <p>{title}</p>
+          </div>
           <div className={styles.timelineContainer}>
             <div
               className={`${styles.circle} ${

@@ -1,6 +1,12 @@
 .contactWrapper {
   background: rgba(50, 189, 189, 0.3);
   background: #84c395;
+  margin-bottom: 0;
+}
+
+.contactInnerWrapper {
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .contactContainer {
@@ -133,5 +139,9 @@
 @media screen and (min-width: 1360px) {
   .contactContainer {
     padding: 5rem 0 10rem;
+  }
+
+  .contactInnerWrapper {
+    padding: 0;
   }
 }

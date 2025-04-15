@@ -7,6 +7,10 @@
   padding: 0 2rem;
 }
 
+.aboutTitle {
+  padding-bottom: 2rem;
+}
+
 .aboutContent {
   font-size: 2rem;
   word-spacing: 2px;
@@ -15,6 +19,8 @@
 
 .aboutContent > p {
   color: #696969;
+  font-size: 1.75rem;
+  line-height: 2.5rem;
 }
 
 .aboutPic {
@@ -27,7 +33,6 @@
   .about {
     flex-direction: row;
     padding: 5rem;
-    padding-bottom: 20rem;
   }
 
   .aboutTitle {
@@ -38,5 +43,22 @@
   .aboutContent {
     margin-right: 10rem;
     font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    padding: 5rem 10rem;
+  }
+
+  .aboutContent {
+    font-size: 2.3rem;
+    line-height: 3rem;
+  }
+
+  .aboutContent > p {
+    font-size: 2.3rem;
+    line-height: 3rem;
+    margin: 1.5rem 0;
   }
 }

@@ -1,6 +1,4 @@
 .careerContainer {
-  padding: 0 2rem;
-  margin-top: 15rem;
 }
 
 .careerContainer > h2 {
@@ -40,13 +38,13 @@
 
 .experienceHeaderContainer {
   display: flex;
-  padding: 0.35rem 0 0.25rem;
+  margin: 0.5rem 0 1.25rem;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .experienceHeaderContainer > h3 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin: 0;
   padding: 0;
 }
@@ -58,6 +56,10 @@
   font-style: italic;
   min-width: 100px;
   text-align: right;
+}
+
+.desktopExperienceDetails {
+  display: none;
 }
 
 .experienceDetails {
@@ -76,4 +78,83 @@
 
 .experienceContainer:last-of-type p:last-child {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .experienceContainer {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    border: 5px solid var(--accent-color);
+    border-radius: 50%;
+  }
+
+  .circleFilled {
+    background-color: var(--accent-color);
+  }
+
+  .line {
+    width: 5px;
+    height: calc(100% - 4rem - 5px);
+    background-color: var(--accent-color);
+  }
+
+  .desktopExperienceDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .desktopExperienceDetails p {
+    color: "#696969";
+    margin: 0;
+  }
+
+  .desktopExperienceDetails > p:first-of-type {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .desktopExperienceDetails h3 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 0.95rem;
+  }
+
+  .desktopExperienceDetails > p:last-of-type {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-align: right;
+  }
+
+  .experienceDetails {
+    padding-top: 1.5rem;
+    padding-bottom: 7rem;
+  }
+  .experienceContainer:last-of-type .experienceDetails {
+    padding-bottom: 3rem;
+  }
+
+  .experienceHeaderContainer {
+    display: none;
+  }
+
+  .experienceDetails > p:first-of-type {
+    display: none;
+  }
+
+  .experienceDetails > p:last-of-type {
+    font-size: 2.3rem;
+    margin-top: 0;
+  }
 }
