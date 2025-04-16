@@ -13,7 +13,7 @@
   width: calc(100% - 1rem);
   padding: 8rem 2rem 2.5rem;
   margin-left: -1.5rem;
-  background-color: var(--accent-color);
+  background-color: #000000;
   margin-bottom: 3rem;
 }
 
