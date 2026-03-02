@@ -48,6 +48,7 @@
 
 .h2Toc {
   margin-top: 2rem;
+  display: none;
 }
 
 .h3 {
@@ -87,21 +88,8 @@
   padding: 0;
 }
 
-.li > .a::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 5px;
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  position: relative;
-  left: -1.25rem;
-  top: 1.2rem;
-}
-
 .ul .ul {
   margin-left: 0;
-  /* padding-left: 0.75rem; */
 }
 
 .ol {
@@ -111,21 +99,55 @@
 }
 
 .li {
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   height: min-content;
   padding-left: 1.5rem;
+  border-left: 2px solid #ddd;
 }
 
 .li .li {
-  padding-left: 0.75rem;
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+  margin-left: 0.25rem;
+  border-left: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.li > .a {
+  font-weight: 400;
+}
+
+.li .li:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.li .li:hover {
+  border-left-color: var(--accent-color);
+}
+
+.li[data-active="true"] {
+  border-left-color: var(--accent-color);
+}
+
+.li[data-active="true"] > .a {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.li .li[data-active="true"] {
+  border-left-color: var(--accent-color);
 }
 
 .li > .a {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.li > .a:hover {
+  color: var(--accent-color);
 }
 
 .blockquote {

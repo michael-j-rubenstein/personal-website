@@ -1,14 +1,23 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import styles from "./WorkExperience.module.css";
 
 const EXPERIENCE = [
   {
+    title: "Frontend Lead & Backend Architect",
+    company: "IBM",
+    date: "2025 - Present",
+    jobDescription:
+      "Founding engineer on watsonx Workshop, IBM's internal AI-powered enablement platform for sales professionals. My responsibilities include leading frontend development and architecting our serverless backend. Led a team of ten interns to deliver core features end-to-end.",
+    isCurrent: true,
+  },
+  {
     title: "Demo Engineer / Sales Enablement",
     company: "IBM",
-    date: "2024 - Present",
+    date: "2024 - 2025",
     jobDescription:
       "Developed demos, workflow optimization tools, labs, and learning content as part of the IBM Global Sales department within the Data and AI team.",
-    isCurrent: true,
+    isCurrent: false,
   },
   {
     title: "Machine Learning Engineer",
@@ -45,34 +54,65 @@ const EXPERIENCE = [
 ];
 
 const Career = () => {
+  const entryRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+
+    entryRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className={`${styles.careerContainer} container`} id="career">
       <h2 className="heading">My Career</h2>
-      {EXPERIENCE.map(({ title, company, date, jobDescription, isCurrent }) => (
-        <div key={title} className={styles.experienceContainer}>
-          <div className={styles.desktopExperienceDetails}>
-            <p>{date}</p>
-            <h3>{company}</h3>
-            <p>{title}</p>
-          </div>
-          <div className={styles.timelineContainer}>
+      {EXPERIENCE.map(
+        ({ title, company, date, jobDescription, isCurrent }, index) => {
+          return (
             <div
-              className={`${styles.circle} ${
-                !isCurrent && styles.circleFilled
-              }`}
-            />
-            <div className={styles.line} />
-          </div>
-          <div className={styles.experienceDetails}>
-            <div className={styles.experienceHeaderContainer}>
-              <h3>{company}</h3>
-              <p>{date}</p>
+              key={title}
+              ref={(el) => (entryRefs.current[index] = el)}
+              className={styles.experienceContainer}
+              style={{ animationDelay: `${index * 0.15}s` }}
+            >
+              <div className={styles.desktopExperienceDetails}>
+                <p>{date}</p>
+                <h3>{company}</h3>
+                <p>{title}</p>
+              </div>
+              <div className={styles.timelineContainer}>
+                <div
+                  className={`${styles.circle} ${
+                    !isCurrent && styles.circleFilled
+                  }`}
+                />
+                <div className={styles.line} />
+              </div>
+              <div className={styles.experienceDetails}>
+                <div className={styles.experienceHeaderContainer}>
+                  <h3>{company}</h3>
+                  <p>{date}</p>
+                </div>
+                <p>{title}</p>
+                <p>{jobDescription}</p>
+              </div>
             </div>
-            <p>{title}</p>
-            <p>{jobDescription}</p>
-          </div>
-        </div>
-      ))}
+          );
+        },
+      )}
     </section>
   );
 };

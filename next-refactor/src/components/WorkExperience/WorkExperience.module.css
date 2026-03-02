@@ -10,6 +10,12 @@
   flex-direction: row;
   gap: 1rem;
   padding-right: 0.75rem;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.experienceContainer.visible {
+  animation: fadeInUp 0.6s ease forwards;
 }
 
 .timelineContainer {
@@ -114,7 +120,7 @@
   }
 
   .desktopExperienceDetails p {
-    color: "#696969";
+    color: #696969;
     margin: 0;
   }
 
@@ -138,7 +144,7 @@
   }
 
   .experienceDetails {
-    padding-top: 1.5rem;
+    padding-top: 1.05rem;
     padding-bottom: 7rem;
   }
   .experienceContainer:last-of-type .experienceDetails {
@@ -157,5 +163,16 @@
     font-size: 2.15rem;
     line-height: 1.5;
     margin-top: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -58,7 +58,6 @@ export function useMDXComponents(components) {
     ul: (props) => {
       return (
         <ModalContainer>
-          <div className={styles.ulDot} />
           <ul className={styles.ul} {...props} />
         </ModalContainer>
       );
